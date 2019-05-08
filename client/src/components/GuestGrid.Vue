@@ -16,7 +16,7 @@ export default {
   props: ["bookings"],
   methods: {
     handleDelete(id) {
-      GuestService.deleteguest(id)
+      GuestService.deleteGuest(id)
       .then(res => {
         eventBus.$emit('guest-added');
       });
