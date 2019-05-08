@@ -31,4 +31,24 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+.guestgrid {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  margin-right: 20px;
+  width: 200px;
+  height: 200px;
+}
+
+#GuestGrid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
 </style>
