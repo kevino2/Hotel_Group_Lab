@@ -41,10 +41,3 @@ export default {
 
 <style lang="css" scoped>
 </style>
-
-
-name
-email
-status
-
-GuestService
