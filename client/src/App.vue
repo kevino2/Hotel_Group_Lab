@@ -45,7 +45,7 @@ export default {
 <style lang="css" scoped>
 
 h2 {
-  color: black;
+  color: white;
   padding-top: 20px;
 }
 
@@ -57,8 +57,8 @@ h2 {
   width: 50%;
   height: 100%;
   margin-bottom: 20px !important;
-  background: lightblue;
-  box-shadow: 1px 1px 10px #FF6A00;
+  background: black;
+  box-shadow: 1px 1px 10px white;
   padding-left: 30px;
 }
 

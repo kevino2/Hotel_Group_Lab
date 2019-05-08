@@ -68,6 +68,10 @@ input[type=text], input[type=email], input[type=checkbox]{
   box-sizing: border-box;
 }
 
+input[type=checkbox] {
+  height: 50%;
+}
+
 h1 {
   text-align: center;
   margin-bottom: 30px;
