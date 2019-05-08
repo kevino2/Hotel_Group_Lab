@@ -1,6 +1,6 @@
 <template lang="html">
- <div id="guestsGrid">
-   <div class="guest" v-for="guest in guests">
+ <div id="GuestGrid">
+   <div class="guestgrid" v-for="guest in guests">
      <h2>{{guest.name}}</h2>
      <p>{{guest.email}} on {{guest.status}}</p>
      <button @click="handleDelete(guest._id)">Delete</button>

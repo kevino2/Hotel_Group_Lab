@@ -2,7 +2,7 @@
 <template lang="html">
   <div id="app">
    <guest-form/>
-   <guest-grid :guests="guests" />
+   <guest-grid :bookings="guests" />
   </div>
 </template>
 
