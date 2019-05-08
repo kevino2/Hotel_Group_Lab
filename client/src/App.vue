@@ -1,6 +1,8 @@
 <template lang="html">
-  <guest-form/>
-  <guest-grid/>
+  <div class="">
+    <guest-form/>
+    <guest-grid/>
+  </div>
 
 </template>
 
