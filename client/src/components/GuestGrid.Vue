@@ -3,8 +3,7 @@
    <div class="guestgrid" v-for="guest in guestgrid">
      <h2>{{guest.name}}</h2>
      <p>{{guest.email}} on {{guest.status}}</p>
-
-     <button @click="handleDelete(guest._id)">Delete Guest</button>
+     <button @click="handleDelete(guest._id)">Delete</button>
      </div>
    </div>
 </template>

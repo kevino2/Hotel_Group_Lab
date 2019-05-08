@@ -1,6 +1,6 @@
 <template lang="html">
   <form class="" method="post" v-on:submit="addGuest">
-    <h2></h2>
+
     <label for="name">Name:</label>
     <input type="text" id="name" v-model="name" required/>
 
@@ -16,21 +16,17 @@
 </template>
 
 <script>
-import { eventBus } from '../main';
-import GuestService from '../services/GuestService';
-
 export default {
-  name: "Booking Form",
   data() {
     return {
-        name: '',
+      name: '',
       email: '',
       status: false
     }
   },
   methods: {
     addGuest(x){
-      x.preventDefault();
+      x.preventDefault()
       const guest = {
         name: this.name,
         email: this.email,
@@ -45,10 +41,3 @@ export default {
 
 <style lang="css" scoped>
 </style>
-
-
-<!-- name
-email
-status
-
-GuestService -->
