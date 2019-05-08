@@ -1,5 +1,5 @@
 <template lang="html">
-  <form class="" method="post" v-on:submit="addGuest">
+  <form class="booking-form" method="post" v-on:submit="addGuest">
     <h1>Create a Booking:</h1>
     <label for="name">Name:</label>
     <input type="text" id="name" v-model="name" required/>
@@ -42,4 +42,13 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+.booking-form {
+  margin-top: 30px;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
 </style>
