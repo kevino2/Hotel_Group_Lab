@@ -20,8 +20,9 @@ import { eventBus } from '../main';
 import GuestService from '../services/GuestService';
 
 export default {
-  name: "Booking Form",
+
   data() {
+
     return {
         name: '',
       email: '',
@@ -35,7 +36,7 @@ export default {
         name: this.name,
         email: this.email,
         status: this.status
-      }
+      };
       GuestService.postGuest(guest)
       .then(res => eventBus.$emit('guest-added', res))
     }
