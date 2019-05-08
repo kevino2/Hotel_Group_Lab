@@ -2,7 +2,7 @@
 <template lang="html">
   <div id="app">
    <guest-form/>
-   <guest-grid :guests="guests" />
+   <guest-grid :bookings="guests" />
   </div>
 </template>
 
@@ -21,11 +21,12 @@ export default {
   },
   components: {
     GuestForm,
-    GuestGrid
+    GuestGrid,
+    GuestService
   },
   mounted() {
     this.fetchData();
-    eventBus.$on('guest-added', this.fetchData);
+    eventBus.$on('refresh-data', this.fetchData);
   },
   methods: {
     fetchData(){

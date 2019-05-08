@@ -12,9 +12,15 @@ const createRouter = require('./helpers/create_router.js');
 MongoClient.connect('mongodb://localhost:27017')
 .then((client) => {
   const db = client.db('hotelbookings');
+
   const guestsCollection = db.collection('guests');
   const guestsRouter = createRouter(guestsCollection);
   app.use('/api/guests', guestsRouter);
+
+  const bookingCollection = db.collection('bookings');
+  const bookingsRouter = createRouter(bookingCollection);
+  app.use('/api/bookings', bookingsRouter);
+
 })
 .catch(console.error);
 
