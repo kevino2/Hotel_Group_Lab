@@ -53,13 +53,14 @@ export default {
 <style lang="css" scoped>
 
 .guestgrid {
-  border: 1px solid black;
+  border: 1px solid white;
   display: flex;
   flex-direction: column;
   padding: 0px;
   margin-bottom: 15px;
   margin-top: 15px;
   margin-right: 20px;
+  margin-left: 20px;
   width: 300px;
   height: 200px;
 }
