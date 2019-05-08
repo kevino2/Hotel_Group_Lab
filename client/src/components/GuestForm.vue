@@ -17,7 +17,9 @@
 
 <script>
 export default {
+
   data() {
+
     return {
       name: '',
       email: '',
@@ -31,7 +33,7 @@ export default {
         name: this.name,
         email: this.email,
         status: this.status
-      }
+      };
       GuestService.postGuest(guest)
       .then(res => eventBus.$emit('guest-added', res))
     }
