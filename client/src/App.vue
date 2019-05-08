@@ -21,7 +21,8 @@ export default {
   },
   components: {
     GuestForm,
-    GuestGrid
+    GuestGrid,
+    GuestService
   },
   mounted() {
     this.fetchData();
