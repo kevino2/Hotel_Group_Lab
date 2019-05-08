@@ -21,8 +21,12 @@ export default {
         eventBus.$emit('guest-added');
       });
     }
+  },
+  mounted(){
+    eventBus.$on('guest-added', (guest) => {
+      this.bookings.push(guest)
+    })
   }
-
 }
 </script>
 

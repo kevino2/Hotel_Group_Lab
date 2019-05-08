@@ -25,7 +25,7 @@ export default {
   },
   mounted() {
     this.fetchData();
-    eventBus.$on('guest-added', this.fetchData);
+    eventBus.$on('refresh-data', this.fetchData);
   },
   methods: {
     fetchData(){
