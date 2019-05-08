@@ -2,7 +2,10 @@
 <template lang="html">
   <div id="app">
    <guest-form/>
+
    <guest-grid :bookings="guests" />
+
+   <guest-grid :guests="guests" />
   </div>
 </template>
 
@@ -25,7 +28,7 @@ export default {
   },
   mounted() {
     this.fetchData();
-    eventBus.$on('refresh-data', this.fetchData);
+    eventBus.$on('guest-added', this.fetchData);
   },
   methods: {
     fetchData(){
