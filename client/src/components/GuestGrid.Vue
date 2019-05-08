@@ -18,7 +18,7 @@ export default {
     handleDelete(id) {
       GuestService.deleteGuest(id)
       .then(res => {
-        eventBus.$emit('guest-added');
+        eventBus.$emit('refresh-data');
       });
     }
   },
