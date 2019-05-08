@@ -2,20 +2,20 @@ const baseURL = 'http://localhost:3000/api/bookings/'
 
 export default {
 
-getBookings(){
+getGuests(){
   return fetch(baseURL)
   .then(res => res.json())
 
 },
-postBooking(payload) {
+postGuest(guest) {
   return fetch(baseURL, {
   method: 'POST',
-  body: JSON.stringify(payload),
+  body: JSON.stringify(guest),
   headers: {'Content-Type': 'application/json'}
   })
   .then(res => res.json())
 },
-deleteBooking(id) {
+deleteGuest(id) {
   return fetch(baseURL + id, {
     method: 'DELETE'
    })
