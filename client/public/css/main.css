@@ -6,3 +6,9 @@
 html {
   min-height: 100%;
 }
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  background: linear-gradient(to top, #485563, #29323c);
+}

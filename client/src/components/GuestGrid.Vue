@@ -1,5 +1,11 @@
 <template lang="html">
  <div id="GuestGrid">
+
+   <div class="guestgrid" v-for="guest in guests">
+     <h2>{{guest.name}}</h2>
+     <p>{{guest.email}} on {{guest.status}}</p>
+     <button @click="handleDelete(guest._id)">Delete/<button>
+
    <div class="guestgrid" v-for="guest in bookings">
      <h2>{{guest.name}}</h2>
      <br>
@@ -7,6 +13,11 @@
      <br>
      <p>Checked-in: {{guest.status}}</p>
      <button id="delete" @click="handleDelete(guest._id)">Delete</button>
+
+     <p>{{guest.email}} on {{guest.status}}</p>
+     <button @click="handleDelete(guest._id)">Delete</button>
+
+
      </div>
    </div>
 </template>
@@ -19,9 +30,15 @@ export default {
   props: ["bookings"],
   methods: {
     handleDelete(id) {
+
+      GuestService.deleteguest(id)
+      .then(response => {
+        eventBus.$emit('guest-added');
+
       GuestService.deleteGuest(id)
       .then(res => {
         eventBus.$emit('refresh-data');
+
       });
     }
   },
@@ -36,13 +53,14 @@ export default {
 <style lang="css" scoped>
 
 .guestgrid {
-  border: 1px solid black;
+  border: 1px solid white;
   display: flex;
   flex-direction: column;
   padding: 0px;
   margin-bottom: 15px;
   margin-top: 15px;
   margin-right: 20px;
+  margin-left: 20px;
   width: 300px;
   height: 200px;
 }
